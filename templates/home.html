@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background: #292929;
+    }
+    a:link {
+        color: floralwhite;
+    }
+    a:visited {
+        color: fuchsia;
+    }
+    select {
+        font-size: 18px;
+    }
+    input {
+        font-size: 18px;
+    }
+    .dropdown {
+        margin-left: 20px;
+        position: relative;
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+    .aboutButton {
+        text-align: center;
+        background-color: gray;
+        color: floralwhite;
+        float: right;
+        margin-right: 30px;
+        font-size: 20px;
+        padding: 16px 32px;
+        margin-top: 10px;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helios Retirement Planner</title>
+</head>
+<body>
+    <div style="margin-left: 20px; color: floralwhite; font-family: 'Arial Rounded MT Bold'; padding-top: 10px">
+        <p>
+            <span style="font-size: 60px; font-weight: bold">HELIOS</span>
+            <span><button class="aboutButton"; onclick="window.location.href='about'">&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;</button></span>
+            <br>
+            <span style="font-size: 20px">Retirement Destination Planner</span>
+        </p>
+    </div>
+    <div>
+    <br>
+        <form class="dropdown"; method='POST'; action = {{ url_for('post_results') }}>
+                <select name="locations" id="locations">
+                    <option value="location" selected>Choose a retirement destination: </option>
+                    {% for location in locations[0:] %}
+                        <option value="{{ location }}">{{ location }}</option>
+                    {% endfor %}
+                </select>
+                <select name="decades" id="decades">
+                    <option value="decade" selected>Choose a retirement decade: </option>
+                    {% for decade in decades[0:] %}
+                        <option value="{{ decade }}">{{ decade }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="  SEARCH  ">
+        </form>
+    </div>
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li style="color: floralwhite">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

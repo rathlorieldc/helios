@@ -1,0 +1,55 @@
+State,Capital,Wild Fires,Earthquakes,Hurricanes,Tornadoes
+Alabama,Montgomery,Medium,Medium,High,High
+Alaska,Juneau,High,High,Low,Low
+Arizona,Phoenix,High,High,Low,Low
+Arkansas,Little Rock,Medium,High,Low,High
+California,Sacramento,High,High,Low,Medium
+California,Los Angeles,High,High,Low,Medium
+Colorado,Denver,High,High,Low,High
+Connecticut,Hartford,Low,Low,Medium,Low
+Delaware,Dover,Low,Low,Medium,Low
+District of Columbia,Washington,Low,Low,Medium,Medium
+Florida,Tallahassee,High,Low,High,High
+Florida,Miami,High,Low,High,High
+Georgia,Atlanta,Medium,Medium,High,High
+Hawaii,Honolulu,Medium,High,Low,Low
+Idaho,Boise,High,High,Low,Low
+Illinois,Chicago,Low,Medium,Low,High
+Indiana,Indianapolis,Low,Medium,Low,Medium
+Iowa,Des Moines,Medium,Low,Low,High
+Kansas,Topeka,High,Medium,Low,High
+Kentucky,Louisville,Medium,Medium,Low,Medium
+Louisiana,New Orleans,Medium,Low,High,High
+Maine,Augusta,Low,Medium,Medium,Low
+Maryland,Annapolis,Low,Low,Medium,Medium
+Massachusetts,Boston,Low,Low,Medium,Low
+Michigan,Ann Arbor,Medium,Low,Low,Medium
+Minnesota,Saint Paul,High,Low,Low,High
+Mississippi,Jackson,Medium,Low,High,High
+Missouri,Jefferson City,Medium,High,Low,High
+Montana,Helena,High,High,Low,Medium
+Nebraska,Lincoln,Medium,Medium,Low,High
+Nevada,Carson City,High,High,Low,Low
+Nevada,Las Vegas,High,High,Low,Low
+New Hampshire,Concord,Low,Medium,Medium,Low
+New Jersey,Trenton,Medium,Low,Medium,Low
+New Mexico,Santa Fe,High,High,Low,Medium
+New York,New York,Low,Medium,High,Medium
+North Carolina,Asheville,Medium,Low,High,High
+North Dakota,Bismarck,High,Low,Low,High
+Ohio,Columbus,Low,Medium,Low,Medium
+Oklahoma,Oklahoma City,High,Medium,Low,High
+Oregon,Portland,High,High,Low,Low
+Pennsylvania,Philadelphia,Low,Medium,Medium,Medium
+Rhode Island,Providence,Low,Low,Medium,Low
+South Carolina,Columbia,Medium,Medium,High,Medium
+South Dakota,Pierre,Medium,Medium,Low,High
+Tennessee,Nashville,Low,High,Low,Medium
+Texas,Austin,High,High,High,High
+Utah,Salt Lake City,High,High,Low,Low
+Vermont,Burlington,Low,Low,Low,Low
+Virginia,Richmond,Low,Medium,High,Medium
+Washington,Seattle,High,High,Low,Low
+West Virginia,Charleston,Medium,Low,Low,Low
+Wisconsin,Madison,Low,Low,Low,Medium
+Wyoming,Cheyenne,High,High,Low,Medium

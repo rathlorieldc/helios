@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        background: #292929;
+    }
+    img {
+        width: 100%;
+    }
+    select {
+
+    }
+    a:link {
+        color: floralwhite;
+    }
+    a:visited {
+        color: lightpink;
+    }
+    .content {
+        max-width: 720px;
+        margin: auto;
+        justify-content: center;
+        font: 18px sans-serif;
+        color: floralwhite;
+    }
+    .column {
+        flex: 50%;
+    }
+    .row {
+        display: flex;
+    }
+    .score {
+        font-size: 40px;
+        color: floralwhite;
+    }
+    h1 {
+        text-align: center;
+        padding-top: 20px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Projected Climate Data</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Results for {{ location }} in {{ decade }}</h1>
+        <!-- placeholder matplotlib graph -->
+        <br>
+        <img src="{{ url_for('static', filename='plot.png')}}"
+                 alt="plot">
+        <br>
+        <div class="row">
+            <div class="column">
+            <br>
+            <h2>Low emissions results:</h2><br>
+                Average max daily temp: &nbsp;{{ le_max_temp }}°F<br><br>
+                Average min daily temp: &nbsp;{{ le_min_temp }}°F<br><br>
+                Days with max temp over 100°F: &nbsp;{{ le_hot_days }} <br><br>
+                Days with max temp below 32°F: &nbsp;{{ le_cold_days }}<br><br>
+                Average annual precipitation: &nbsp;{{ le_pcpn }}''<br><br>
+                Number of dry days: &nbsp;{{ le_dry_days }} <br><br><br>
+            </div>
+            <div class="column"; style="margin-left: 80px">
+            <br>
+            <h2>High emissions results:</h2><br>
+                Average max daily temp: &nbsp;{{ he_max_temp }}°F <br><br>
+                Average min daily temp: &nbsp;{{ he_min_temp }}°F <br><br>
+                Number of days over 100°F: &nbsp;{{ he_hot_days }} <br><br>
+                Days with max temp below 32°F: &nbsp;{{ he_cold_days }}<br><br>
+                Average annual precipitation: &nbsp;{{ he_pcpn }}'' <br><br>
+                Number of dry days: &nbsp;{{ he_dry_days }} <br><br><br>
+            </div>
+        </div>
+        <h2 style="text-align: center">Risk of natural disasters for {{ location }}:</h2>
+        <p style="text-align: center">
+            Hurricanes: &nbsp;{{ hurricanes }} &nbsp;&nbsp;|&nbsp;&nbsp;  Tornadoes: &nbsp;{{ tornadoes }} <br><br>
+            Wildfires: &nbsp;{{ wild_fires }}   &nbsp;&nbsp;|&nbsp;&nbsp;  Earthquakes: &nbsp;{{ earthquakes }}
+        </p><br><br><br>
+        <p style="text-align: center">
+            <span class="score";>Retirement Score: &nbsp;{{ ave_score }}</span>
+        </p>
+        <p style="text-align: center">
+            <br><br><br><br>
+            <a href="interactive_map">Check out our interactive map!</a>
+            <br><br><br><br>
+            <a href="home">Return to home</a><br><br><br>
+        </p>
+    </div>
+</body>
+</html>
