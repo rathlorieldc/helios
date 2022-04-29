@@ -61,6 +61,8 @@ def extreme_temp_score(days):
     score = 10 - (days * .5)
     if score < 1:
         return 1
+    elif score > 10:
+        return 10
     else:
         return score
 
@@ -98,6 +100,7 @@ def retirement_score(tmax, tmin, pcpn, hot_days, cold_days, dry_days):
 
     total_score = round((tmax_score + tmin_score + precip_score +
                          cold_score + hot_score + dry_score) / 6)
+    print('total score is', total_score)
 
     return total_score
 
