@@ -4,9 +4,15 @@
     body {
         background: #292929;
     }
-    h1 {
+    .footer {
+        position: relative;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        color: floralwhite;
         text-align: center;
-        padding-top: 20px;
     }
     a:link {
         color: floralwhite;
@@ -15,20 +21,47 @@
         color: lightpink;
     }
     .content {
-        max-width: 900px;
+        max-width: 980px;
         margin: auto;
         justify-content: center;
         font: 18px sans-serif;
         color: floralwhite;
     }
+    .topnav {
+        overflow: hidden;
+        background-color: #292929;
+    }
+    .topnav a {
+        float: right;
+        color: floralwhite;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Arial Rounded MT Bold';
+    }
+    .topnav a:hover {
+        background-color: floralwhite;
+        color: black;
+    }
+    .topnav a.active {
+        background-color: floralwhite;
+        color: black;
+    }
 </style>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
 </head>
 <body>
+    <div class="topnav">
+        <a class="active" href="about">About</a>
+        <a href="home">Home</a>
+        <a href="interactive_map">Interactive Map</a>
+    </div>
     <div class="content">
-        <h1 style="font-size: 60px; font-weight: bold">About</h1>
+        <br><br>
+        <h1 style="text-align: center">About Helios</h1>
         <p>
             <br>
             <h3>What it Does</h3>
@@ -85,8 +118,11 @@
         </p>
         <p style="text-align: center">
             <br><br><br><br>
-            <a href="home">Return to home</a>
+            <a href="home">Return to home</a><br><br>
         </p>
+    </div>
+    <div class="footer">
+        <small>&copy Copyright 2022, Helios Retirement Destination Planner. All Rights Reserved.</small>
     </div>
 </body>
 </html>

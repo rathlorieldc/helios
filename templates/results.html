@@ -7,8 +7,15 @@
     img {
         width: 100%;
     }
-    select {
-
+    .footer {
+        position: relative;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        color: floralwhite;
+        text-align: center;
     }
     a:link {
         color: floralwhite;
@@ -37,12 +44,38 @@
         text-align: center;
         padding-top: 20px;
     }
+        .topnav {
+        overflow: hidden;
+        background-color: #292929;
+    }
+    .topnav a {
+        float: right;
+        color: floralwhite;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Arial Rounded MT Bold';
+    }
+    .topnav a:hover {
+        background-color: floralwhite;
+        color: black;
+    }
+    .topnav a.active {
+        background-color: floralwhite;
+        color: black;
+    }
 </style>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projected Climate Data</title>
 </head>
 <body>
+    <div class="topnav">
+        <a href="home">Home</a>
+        <a href="about">About</a>
+        <a href="interactive_map">Interactive Map</a>
+    </div>
     <div class="content">
         <h1>Results for {{ location }} in {{ decade }}</h1>
         <!-- placeholder matplotlib graph -->
@@ -82,10 +115,11 @@
         </p>
         <p style="text-align: center">
             <br><br><br><br>
-            <a href="interactive_map">Check out our interactive map!</a>
-            <br><br><br><br>
             <a href="home">Return to home</a><br><br><br>
         </p>
+    </div>
+    <div class="footer">
+        <small>&copy Copyright 2022, Helios Retirement Destination Planner. All Rights Reserved.</small>
     </div>
 </body>
 </html>
