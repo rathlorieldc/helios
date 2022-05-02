@@ -21,6 +21,7 @@
         justify-content: center;
         color: floralwhite;
         text-align: center;
+        font-family: sans-serif;
     }
     input {
         font-size: 18px;
@@ -29,6 +30,7 @@
     }
     .select2 {
         font-size: 18px;
+        font-family: sans-serif;
     }
     .dropdown {
         margin-left: 20px;
@@ -38,7 +40,7 @@
     }
     .topnav {
         overflow: hidden;
-        background-color: #292929;
+        background-color: #212121;
     }
     .topnav a {
         float: right;
@@ -50,13 +52,66 @@
         font-family: 'Arial Rounded MT Bold';
     }
     .topnav a:hover {
-        background-color: floralwhite;
-        color: black;
+        background-color: #292929;
+        color: floralwhite;
     }
     .topnav a.active {
-        background-color: floralwhite;
-        color: black;
+        background-color: #292929;
+        color: floralwhite;
     }
+    /* this section is to customize the select2 dropdown menus */
+    .select2-container--default .select2-search--dropdown .select2-search__field {
+      background: #212121;
+      color: floralwhite !important;
+    }
+    /* Search Box border */
+    .select2-search--dropdown{
+      background: #212121;
+    }
+    /* Selected / Initial state input */
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      background: #212121;
+      color: floralwhite !important;
+    }
+    /* Option List Area */
+    .select2-results__option {
+      background: #212121;
+      color: floralwhite !important;
+        font-family: sans-serif;
+        font-size: 18px;
+    }
+    /* Arrow button */
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      background: #3D3D3D;
+    }
+
+    /* Selectable items highlight */
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+      background: #3D3D3D !important;
+    }
+
+    /* Selected item highlight */
+    .select2-container--default .select2-results__option--selected {
+      background: #3D3D3D !important;
+      color: floralwhite !important;
+    }
+
+    /* Search result message area */
+    .select2-results__message {
+      background: #404040;
+    }
+
+    /* scroll bar */
+    .select2-results__options::-webkit-scrollbar-track {
+        background-color: #212121;
+    }
+    .select2-results__options::-webkit-scrollbar {
+        background-color: #212121;
+    }
+    .select2-results__options::-webkit-scrollbar-thumb {
+        background-color: #3D3D3D;
+    }
+
 </style>
 <html lang="en">
 <head>
