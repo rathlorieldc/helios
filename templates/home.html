@@ -2,6 +2,7 @@
 <style>
     body {
         background: #292929;
+        margin: 0;
     }
     a:link {
         color: floralwhite;
@@ -25,7 +26,7 @@
     }
     input {
         font-size: 18px;
-        background-color: white;
+        background-color: floralwhite;
         font-family: sans-serif;
     }
     .select2 {
@@ -38,6 +39,7 @@
         font-size: 14px;
         font-family: sans-serif;
     }
+    /* navigation bar */
     .topnav {
         overflow: hidden;
         background-color: #212121;
@@ -61,22 +63,26 @@
     }
     /* this section is to customize the select2 dropdown menus */
     .select2-container--default .select2-search--dropdown .select2-search__field {
-      background: #212121;
-      color: floralwhite !important;
+        background: #212121;
+        color: floralwhite !important;
     }
     /* Search Box border */
-    .select2-search--dropdown{
-      background: #212121;
+    .select2-search--dropdown {
+        background: #3D3D3D !important;
+    }
+    /* search field border color */
+    .select2-search__field {
+        border-color: #3D3D3D !important;
     }
     /* Selected / Initial state input */
     .select2-container--default .select2-selection--single .select2-selection__rendered {
-      background: #212121;
-      color: floralwhite !important;
+        background: #212121;
+        color: floralwhite !important;
     }
     /* Option List Area */
     .select2-results__option {
-      background: #212121;
-      color: floralwhite !important;
+        background: #212121;
+        color: floralwhite !important;
         font-family: sans-serif;
         font-size: 18px;
     }
@@ -84,23 +90,27 @@
     .select2-container--default .select2-selection--single .select2-selection__arrow {
       background: #3D3D3D;
     }
-
     /* Selectable items highlight */
     .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-      background: #3D3D3D !important;
+        background: #3D3D3D !important;
     }
-
+    /* change container border color */
+    .select2-container .select2-selection--single {
+        border-color: #292929 !important;
+    }
+    /* change dropdown border color */
+    .select2-dropdown--below {
+        border-color: #292929 !important;
+    }
     /* Selected item highlight */
     .select2-container--default .select2-results__option--selected {
-      background: #3D3D3D !important;
-      color: floralwhite !important;
+        background: #3D3D3D !important;
+        color: floralwhite !important;
     }
-
     /* Search result message area */
     .select2-results__message {
-      background: #404040;
+        background: #3D3D3D;
     }
-
     /* scroll bar */
     .select2-results__options::-webkit-scrollbar-track {
         background-color: #212121;
@@ -111,7 +121,14 @@
     .select2-results__options::-webkit-scrollbar-thumb {
         background-color: #3D3D3D;
     }
-
+    /* get rid of annoying chrome blue outline on focus */
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+    }
+    /* need a simple way to hide the placeholder from the list */
+    .select2-container--default .select2-results__option[aria-disabled=true] {
+    display: none;
+    }
 </style>
 <html lang="en">
 <head>
@@ -140,7 +157,7 @@
         <form class="dropdown"; method='POST'; action = {{ url_for('post_results') }}>
                 <!-- select2 dropdown with searching -->
                 <select class="select2" name="locations" id="locations" data-width="25%">
-                    <option value="location" selected disabled>Choose a retirement location</option>
+                    <option value="" disabled selected hidden>Choose a retirement location</option>
                     {% for location in locations[0:] %}
                         <option value="{{ location }}">{{ location }}</option>
                     {% endfor %}
@@ -173,6 +190,10 @@
     <script>
         $(document).ready(function() {
             $(".select2").select2();
+        })
+        /* auto select search box when container is opened */
+        $(document).on("select2:open", () => {
+          document.querySelector(".select2-container--open .select2-search__field").focus()
         })
     </script>
     <div class="footer">
