@@ -25,9 +25,15 @@
         font-family: sans-serif;
     }
     input {
-        font-size: 18px;
-        background-color: floralwhite;
+        font-size: 16px;
+        background-color: #3D3D3D;
+        color: floralwhite;
         font-family: sans-serif;
+        border-radius: 12px;
+        border-color: #3D3D3D;
+        border-bottom: #3D3D3D;
+        border-right: #3D3D3D;
+        width: 25%;
     }
     .select2 {
         font-size: 18px;
@@ -120,6 +126,7 @@
     }
     .select2-results__options::-webkit-scrollbar-thumb {
         background-color: #3D3D3D;
+        border-radius: 12px !important;
     }
     /* get rid of annoying chrome blue outline on focus */
     input:focus, textarea:focus, select:focus {
@@ -169,9 +176,9 @@
                         <option value="{{ decade }}">{{ decade }}</option>
                     {% endfor %}
                 </select>
-                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <!-- submit search button -->
-                <input type="submit" value="  SEARCH  ">
+                <input type="submit" value="SEARCH">
         </form>
     </div>
     <!-- flash error messages -->
