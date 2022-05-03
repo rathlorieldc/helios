@@ -31,8 +31,6 @@
         color: black;
         font-family: sans-serif;
         border-radius: 12px;
-        border-top-color: #AAAAAA;
-        border-right-color: #AAAAAA;
         width: 25%;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -130,7 +128,7 @@
         width: 10px !important;
     }
     .select2-results__options::-webkit-scrollbar-thumb {
-        background-color: #334E68;
+        background-color: #627D98;
         border-radius: 12px !important;
     }
     /* get rid of annoying chrome blue outline on focus
@@ -192,7 +190,7 @@
             {% if messages %}
                 <ul class=flashes>
                 {% for message in messages %}
-                    <li style="color: floralwhite">{{ message }}</li>
+                    <li style="color: floralwhite; font-family: sans-serif; font-size: 16px">{{ message }}</li>
                 {% endfor %}
                 </ul>
             {% endif %}
