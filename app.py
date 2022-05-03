@@ -188,10 +188,10 @@ def post_results():
     location = request.form.get('locations')
     decade = request.form.get('decades')
     # error handling
-    if location == '' or location == 'location':
+    if location == '' or location == 'location' or location is None:
         flash("You must choose a location.")
         return redirect('/')
-    elif decade == '' or decade == 'decade':
+    elif decade == '' or decade == 'decade' or decade is None:
         flash("You must choose a decade.")
         return redirect('/')
     else:

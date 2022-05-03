@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <style>
     body {
-        background: #292929;
+        background: #102A43;
         margin: 0;
     }
     a:link {
@@ -27,15 +27,15 @@
     /* input button - for some reason it made me style each border separately */
     input {
         font-size: 16px;
-        background-color: #3D3D3D;
-        color: floralwhite;
+        background-color: floralwhite;
+        color: black;
         font-family: sans-serif;
         border-radius: 12px;
-        border-color: #3D3D3D;
-        border-top: #3D3D3D;
-        border-bottom: #3D3D3D;
-        border-right: #3D3D3D;
+        border-top-color: #AAAAAA;
+        border-right-color: #AAAAAA;
         width: 25%;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     .select2 {
         font-size: 18px;
@@ -50,7 +50,7 @@
     /* navigation bar */
     .topnav {
         overflow: hidden;
-        background-color: #212121;
+        background-color: #334E68;
     }
     .topnav a {
         float: right;
@@ -62,79 +62,81 @@
         font-family: 'Arial Rounded MT Bold';
     }
     .topnav a:hover {
-        background-color: #292929;
+        background-color: #334E68;
         color: floralwhite;
     }
     .topnav a.active {
-        background-color: #292929;
+        background-color: #102A43;
         color: floralwhite;
     }
     /* this section is to customize the select2 dropdown menus */
     .select2-container--default .select2-search--dropdown .select2-search__field {
-        background: #212121;
-        color: floralwhite !important;
+        background: floralwhite;
+        color: black !important;
     }
     /* Search Box border */
     .select2-search--dropdown {
-        background: #3D3D3D !important;
+        background: #181818 !important;
     }
     /* search field border color */
     .select2-search__field {
-        border-color: #212121 !important;
-        border-radius: 0px;
+        border-color: #181818 !important;
+        border-radius: 1px;
     }
     /* Selected / Initial state input */
     .select2-container--default .select2-selection--single .select2-selection__rendered {
-        background: #212121;
-        color: floralwhite !important;
+        background: floralwhite;
+        color: black !important;
     }
     /* Option List Area */
     .select2-results__option {
-        background: #212121;
-        color: floralwhite !important;
+        background: floralwhite;
+        color: black !important;
         font-family: sans-serif;
         font-size: 18px;
     }
     /* Arrow button */
     .select2-container--default .select2-selection--single .select2-selection__arrow {
-      background: #3D3D3D;
+      background: floralwhite;
     }
     /* Selectable items highlight */
     .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-        background: #3D3D3D !important;
+        background: #BCCCDC !important;
+        color: floralwhite;
     }
     /* change container border color */
     .select2-container .select2-selection--single {
-        border-color: #292929 !important;
+        border-color: #AAAAAA !important;
     }
     /* change dropdown border color */
     .select2-dropdown--below {
-        border-color: #292929 !important;
+        border-color: #181818 !important;
     }
     /* Selected item highlight */
     .select2-container--default .select2-results__option--selected {
         background: #3D3D3D !important;
-        color: floralwhite !important;
+        color: black !important;
     }
     /* Search result message area */
     .select2-results__message {
-        background: #3D3D3D;
+        background: floralwhite;
     }
     /* scroll bar */
     .select2-results__options::-webkit-scrollbar-track {
-        background-color: #212121;
+        background-color: floralwhite;
     }
     .select2-results__options::-webkit-scrollbar {
-        background-color: #212121;
+        background-color: floralwhite;
+        width: 10px !important;
     }
     .select2-results__options::-webkit-scrollbar-thumb {
-        background-color: #3D3D3D;
+        background-color: #334E68;
         border-radius: 12px !important;
     }
-    /* get rid of annoying chrome blue outline on focus */
+    /* get rid of annoying chrome blue outline on focus
     input:focus, textarea:focus, select:focus {
         outline: none;
-    }
+    } */
     /* need a simple way to hide the placeholder from the list */
     .select2-container--default .select2-results__option[aria-disabled=true] {
     display: none;
