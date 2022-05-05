@@ -244,12 +244,6 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/interactive_map')
-def interactive_map():
-    """ displays the interactive map page """
-    return render_template('interactive_map.html')
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     # explicitly set 404 status
