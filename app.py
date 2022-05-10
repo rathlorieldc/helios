@@ -84,19 +84,20 @@ def dry_days_score(days):
 def retirement_score(tmax, tmin, pcpn, hot_days, cold_days, dry_days):
     """
     the average of all climate factors into one score
+    print statements are for testing
     """
     tmax_score = ave_temp_score(tmax)
-    print('tmax score is', tmax_score)
+    #print('tmax score is', tmax_score)
     tmin_score = ave_temp_score(tmin)
-    print('tmin_score is', tmin_score)
+    #print('tmin_score is', tmin_score)
     precip_score = pcpn_score(pcpn)
-    print('prcpn score is', precip_score)
+    #print('prcpn score is', precip_score)
     cold_score = extreme_temp_score(cold_days)
-    print('cold score is', cold_score)
+    #print('cold score is', cold_score)
     hot_score = extreme_temp_score(hot_days)
-    print('hot score is', hot_score)
+    #print('hot score is', hot_score)
     dry_score = dry_days_score(dry_days)
-    print('dry score is', dry_score)
+    #print('dry score is', dry_score)
 
     total_score = round((tmax_score + tmin_score + precip_score +
                          cold_score + hot_score + dry_score) / 6)
